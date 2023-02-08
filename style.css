@@ -1,0 +1,1156 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+/* =============================== VAR =============================== */
+
+body {
+    --color_font: #0065fc;
+
+    --color_filter_hover: #deebff;
+
+    --color_bg: #F2F2F2;
+
+    --color_fff: #ffffff;
+
+    --color_empty_stars: rgba(180, 173, 173, 0.173);
+
+    --cards_shadow: rgba(12, 10, 10, 0.067);
+
+    --bold: 700;
+}
+
+
+
+
+
+
+/* =============================== General =============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+.wrapper {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    /* background: pink; */
+}
+
+
+h1 {
+    font-size: 1.37rem;
+    font-weight: var(--bold);
+}
+
+h2 {
+    font-size: 1.37rem;
+    font-weight: var(--bold);
+}
+
+
+/* =============================== Header =============================== */
+
+.header {
+    height: 127px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 2rem;
+    /* background: rgb(21, 168, 21); */
+}
+
+.logo_container {
+    display: flex;
+    align-items: center;
+    /* background: rgb(228, 162, 97); */
+}
+
+.logo {
+    width: auto;
+    height: 19px;
+}
+
+.header_nav_link {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* background: rgb(201, 110, 201); */
+}
+
+.link {
+    width: 160px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid transparent;
+    /*prevents movement during the hover effect*/
+}
+
+.link,
+.link:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.link:hover {
+    border-top: 2px solid var(--color_font);
+    color: var(--color_font);
+    font-weight: 500;
+}
+
+
+
+/* =============================== Up Section =============================== */
+
+.up_section {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2rem;
+    /* background: rgb(190, 53, 53); */
+}
+
+.up_section_title>h1 {
+    padding-bottom: 0.5rem;
+}
+
+.up_section_title>p {
+    margin-bottom: 1.3rem;
+}
+
+.search_bar {
+    width: calc(286px + 132px);
+    height: 49px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    overflow: hidden;
+    /* background-color: rgb(0, 255, 242);  */
+}
+
+.geoloc_icon {
+    width: 50px;
+    height: 18px;
+    padding: 15.5px 0;
+    background-color: var(--color_bg);
+    cursor: pointer;
+    shape-rendering: geometricPrecision;
+}
+
+.search_bar>input {
+    width: calc(286px - 50px);
+    height: 100%;
+    padding: 0 0.5rem;
+    border: none;
+    border-top: 1px solid var(--color_bg);
+    border-bottom: 1px solid var(--color_bg);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.search_bar ::placeholder {
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.search_bar input:focus {
+    /*remove black border when typing*/
+    outline: none;
+}
+
+.search_bar .form_button[type="submit"] {
+    width: 132px;
+    height: 100%;
+    color: var(--color_fff);
+    font-size: 1.1rem;
+    font-weight: var(--bold);
+    background: var(--color_font);
+    border: none;
+    cursor: pointer;
+}
+
+
+.up_section_filter {
+    display: flex;
+    align-items: center;
+    gap: 0 1.5rem;
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+    font-weight: var(--bold);
+
+}
+
+.filter_button {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    border: 2px solid #D9D9D9;
+    border-radius: 25px;
+    background: var(--color_fff);
+    font-size: 1rem;
+    font-weight: var(--bold);
+    cursor: pointer;
+}
+
+.filter_button:hover {
+    background-color: var(--color_filter_hover);
+}
+
+.filter_button :nth-child(1) {
+    /* icons filter */
+    padding-right: 0.6rem;
+    font-size: 1.3rem;
+    color: var(--color_font);
+    font-weight: var(--bold);
+    shape-rendering: geometricPrecision;
+}
+
+.infos {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.4rem;
+}
+
+.infos :nth-child(1) {
+    width: 0.7rem;
+    height: 0.7rem;
+    padding: 0.3rem;
+    margin: 0 0.5rem 0 0;
+    color: var(--color_font);
+    border: 1px solid #D9D9D9;
+    border-radius: 50%;
+    shape-rendering: geometricPrecision;
+
+}
+
+
+
+/* =============================== Main Section =============================== */
+
+.main_section {
+    min-height: 626px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 2rem;
+    padding-bottom: 3.8rem;
+    /* background: chocolate; */
+}
+
+
+
+/* =============================== Accommodations Section =============================== */
+
+.accommodations_section {
+    width: 880px;
+    height: 626px;
+    margin: 0 2rem 0 0;
+    background: var(--color_bg);
+    border-radius: 20px;
+}
+
+.accommodations_section>h2 {
+    padding: 2.5rem 0 1.5rem 2.5rem;
+    font-weight: var(--bold);
+}
+
+.show_more_accommodations {
+    display:flex;
+    margin: 2.5rem 0 2.5rem 2.5rem;
+    font-size: 1.12rem;
+    font-weight: var(--bold);
+    text-decoration: none;
+    color: black;
+}
+
+.accommodations_cards_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem 2%;
+    /* gap: 2rem 2rem; */
+    /*space: vertical / horizontal*/
+    padding: 0 2.5rem;
+}
+
+.accommodation_card {
+    width: clamp(160px, 32%, 246px);
+    /* min val max */
+    height: 199px;
+    border-radius: 20px;
+    box-shadow: 5px 8px 7px var(--cards_shadow);
+    overflow: hidden;
+    background: var(--color_fff);
+    text-decoration: none;
+    color: black;
+    /* background: rgb(109, 153, 153); */
+}
+
+.img_accommodation_container {
+    width: 100%;
+    height: 124px;
+    padding: 0.3rem;
+    /* background: blueviolet; */
+}
+
+.img_accommodation {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.text_accommodation_container {
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 1rem;
+    /* background: rgb(243, 117, 117); */
+}
+
+.text_accommodation_title {
+    padding-top: 0.2rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.text_accommodation_container>p {
+    font-size: 0.9rem;
+}
+
+.text_accomodation_price-raiting {
+    padding-top: 0.3rem;
+}
+
+.text_accommodation_container p:after {
+    content: "\20AC";
+    /* € */
+    font-weight: 600;
+}
+
+
+
+/* =============================== Most Popular Aside =============================== */
+
+.most_popular_aside {
+    width: 420px;
+    background: var(--color_bg);
+    border-radius: 20px;
+}
+
+.most_popular_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem 2.5rem 1.5rem;
+    /* t+ rl +b */
+    font-weight: var(--bold);
+}
+
+.most_popular_title :first-child {
+    /*trend logo*/
+    color: var(--color_font);
+    font-size: 1.2rem;
+    shape-rendering: geometricPrecision;
+}
+
+.most_popular_cards_container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0rem 2.5rem;
+}
+
+.most_popular_card {
+    display: flex;
+    height: 144px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 9px var(--cards_shadow);
+    /* distance horizontale     distance verticale    diffusion de l'ombre +> +diffuse */
+    text-decoration: none;
+    color: black;
+    background: var(--color_fff);
+    /* background: rgb(40, 116, 116); */
+}
+
+.img_most_popular {
+    width: 40%;
+    padding: 0.3rem 0 0.3rem 0.3rem;
+    object-fit: cover;
+    border-radius: 20px 0 0 20px;
+}
+
+.text_most_popular_container {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 1rem 0.7rem;
+}
+
+.text_most_popular_title-price>h3 {
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.text_most_popular_title-price>p {
+    font-size: 0.9rem;
+}
+
+.text_most_popular_container p:after {
+    content: "\20AC";
+    /* € */
+    font-weight: 600;
+}
+
+
+
+/* =============================== City Activities =============================== */
+
+.city_activities_container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2rem;
+    padding-bottom: 3.8rem;
+    /* background-color: rgb(30, 210, 135); */
+}
+
+.city_activities_title {
+    padding: 0 0 1.3rem 0;
+}
+
+.city_activities_cards_container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.city_activity_card {
+    width: 22.6%;
+    height: 445px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 5px 5px 9px var(--cards_shadow);
+    overflow: hidden;
+    background: var(--color_fff);
+    /* background: cornflowerblue; */
+}
+
+.img_city_activity {
+    width: 100%;
+    height: calc(445px - 56px);
+    object-fit: cover;
+}
+
+.text_city_activity {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    font-weight: var(--bold);
+    /* background-color: rgb(251, 255, 0); */
+}
+
+
+
+/* =============================== Footer =============================== */
+
+footer {
+    margin: 0 2rem;
+    /* background-color: blanchedalmond; */
+}
+
+.footer_container {
+    width: 100%;
+    height: 225px;
+    display: flex;
+    gap: 6rem 15%;
+    padding-top: 2.8rem;
+    background-color: var(--color_bg);
+}
+
+
+.first_footer_column,
+.footer_columns {
+    width: 200px;
+    list-style-type: none;
+}
+
+.first_footer_column {
+    margin: 0 0 0 4rem;
+}
+
+ul li:first-of-type {
+    padding-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: var(--bold);
+}
+
+ul>li {
+    padding: 0.5rem 0;
+}
+
+/* .first_footer_column {
+    background-color:sandybrown;
+}
+.first_footer_column + .footer_columns{
+    background-color: aqua;
+}
+.footer_columns:nth-of-type(3) {
+    background-color: coral;
+} */
+
+
+
+/* =============================== Cards Raitings =============================== */
+
+.rating_1,
+.rating_2,
+.rating_3,
+.rating_4,
+.rating_5 {
+    color: var(--color_font);
+    font-size: 0.7rem;
+    shape-rendering: geometricPrecision;
+
+}
+
+.rating_1 :nth-child(n+2) {
+    color: var(--color_empty_stars);
+}
+
+.rating_2 :nth-child(n+3) {
+    color: var(--color_empty_stars);
+}
+
+.rating_3 :nth-child(n+4) {
+    color: var(--color_empty_stars);
+}
+
+.rating_4 :nth-child(n+5) {
+    color: var(--color_empty_stars);
+}
+
+.rating_5 :nth-child(n+6) {
+    color: var(--color_empty_stars);
+}
+
+
+
+
+/* ============================================================================= */
+/* ============================================================================= */
+/* ============================================================================= */
+/* ============================================================================= */
+/* =============================== Media Queries =============================== */
+/* ============================================================================= */
+/* ============================================================================= */
+/* ============================================================================= */
+/* ============================================================================= */
+
+
+
+/* ================================================================================ */
+/* ================================== MQ Desktop ================================== */
+
+
+
+@media only screen and (min-width : 1301px) {
+
+    .search_bar .mobile_form_button[type="submit"] {
+        display: none;
+    }
+
+
+}
+
+
+
+@media only screen and (min-width: 1051px) and (max-width : 1300px) {
+
+    .search_bar .mobile_form_button[type="submit"] {
+        display: none;
+    }
+
+    .text_accommodation_title,
+    .text_most_popular_title-price>h3 {
+        font-size: 0.9rem;
+    }
+
+    .text_accommodation_container>p,
+    .text_most_popular_title-price>p {
+        font-size: 0.75rem;
+    }
+
+    .text_accommodation_container {
+        padding-left: 0.6rem;
+    }
+
+    .text_accommodation_container>p {
+        padding-top: 0.4rem;
+    }
+
+    .text_accommodation_container>span {
+        /*--> raiting stars*/
+        padding-top: 0.5rem;
+    }
+
+    .rating_1,
+    .rating_2,
+    .rating_3,
+    .rating_4,
+    .rating_5 {
+        font-size: 0.65rem;
+    }
+
+
+}
+
+
+
+@media only screen and (min-width: 992px) and (max-width : 1050px) {
+
+    .search_bar .mobile_form_button[type="submit"] {
+        display: none;
+    }
+
+    .text_accommodation_title,
+    .text_most_popular_title-price>h3 {
+        font-size: 0.85rem;
+    }
+
+    .text_accommodation_container>p,
+    .text_most_popular_title-price>p {
+        font-size: 0.7rem;
+    }
+
+    .text_accommodation_container {
+        padding-left: 0.6rem;
+    }
+
+    .text_accommodation_container>p {
+        padding-top: 0.4rem;
+    }
+
+    .text_accommodation_container>span {
+        /*--> raiting stars */
+        padding-top: 0.5rem;
+    }
+
+    .rating_1,
+    .rating_2,
+    .rating_3,
+    .rating_4,
+    .rating_5 {
+        font-size: 0.6rem;
+    }
+
+    .text_city_activity {
+        font-size: 0.9rem;
+    }
+
+
+}
+
+/* ================================================================================*/
+/* ================================== MQ Tablet ================================== */
+
+
+@media only screen and (min-width: 768px) and (max-width : 991px) {
+
+    .wrapper {
+        /* background:pink; */
+    }
+
+
+    /* =============================== MQ Tab Header =============================== */
+
+    .header {
+        /* background: rgb(21, 168, 21); */
+    }
+
+
+    /* =============================== MQ Tab Up Section =============================== */
+
+    .up_section {
+        display: flex;
+        flex-direction: column;
+        /* background: rgb(190, 53, 53); */
+    }
+
+    .search_bar .mobile_form_button[type="submit"] {
+        display: none;
+    }
+
+    .up_section_filter {
+        display: flex;
+        align-items: center;
+        gap: 0 1.5rem;
+        margin-bottom: 2.5rem;
+        font-size: 1.1rem;
+        font-weight: var(--bold);
+
+    }
+
+    .filter_button {
+        padding: 0 1rem;
+        font-size: 0.9rem;
+    }
+
+    .filter_button :nth-child(1) {
+        /* icons filter */
+        padding-right: 0.6rem;
+        font-size: 1.2rem;
+    }
+
+
+    /* =============================== MQ Tab Main Section =============================== */
+
+    .main_section {
+        flex-wrap: wrap;
+        /* background: chocolate; */
+    }
+
+
+    /* =============================== MQ Tab Accommodations Section =============================== */
+
+    .accommodations_section {
+        width: 100%;
+        margin: 0 0 3.3rem;
+    }
+
+
+    /* =============================== MQ Tab Most Popular Aside =============================== */
+
+    .most_popular_aside {
+        width: 100%;
+        height: 278px;
+    }
+
+    .most_popular_cards_container {
+        flex-direction: row;
+        padding: 0rem 2rem;
+    }
+
+    .img_most_popular {
+        width: 41%;
+    }
+
+    .text_most_popular_container {
+        width: 59%;
+    }
+
+    .text_most_popular_container {
+        padding: 1rem 0.8rem 0.7rem 0.8rem;
+    }
+
+    .text_most_popular_title-price>h3 {
+        font-size: 0.9rem;
+    }
+
+    .text_most_popular_title-price>p {
+        font-size: 0.8rem;
+    }
+
+
+
+    /* =============================== MQ Tab City Activities =============================== */
+
+    .city_activities_container {
+        /* background-color: rgb(30, 210, 135); */
+    }
+
+    .city_activities_title {
+        margin: 0 2rem;
+    }
+
+    .city_activity_card {
+        width: 22%;
+        height: 267px;
+        /* border:1px solid red; */
+        /* background: cornflowerblue; */
+    }
+
+    .img_city_activity {
+        height: calc(267px - 56px);
+    }
+
+    .city_activity_card:nth-of-type(1) .img_city_activity,
+    .city_activity_card:nth-of-type(3) .img_city_activity,
+    .city_activity_card:nth-of-type(4) .img_city_activity {
+        object-fit: cover;
+        transform-origin: top center;
+        transform: scale(1.25);
+        /* image-rendering:auto; */
+        filter: saturate(120%);
+        filter: blur(0.2px);
+    }
+
+    .city_activity_card:nth-of-type(2) .img_city_activity {
+        object-position: 0% 10%;
+        filter: brightness(110%);
+        filter: contrast(100%);
+    }
+
+    .city_activity_card:nth-of-type(3) .img_city_activity {
+        filter: brightness(125%);
+    }
+
+    .text_city_activity {
+        z-index: 1;
+        background: var(--color_fff);
+    }
+
+
+
+    /* =============================== MQ Tab Footer =============================== */
+
+    footer {
+        /* background-color: blanchedalmond; */
+    }
+
+    .footer_container {
+        gap: 6rem 4%;
+        padding-top: 2.8rem;
+    }
+
+    .first_footer_column,
+    .footer_columns {
+        width: 250px;
+    }
+
+    ul>li {
+        padding: 0.4rem 0;
+    }
+
+
+}
+
+
+/* ===================================================================================== */
+/* ================================== MQ Mobile Phone ================================== */
+
+
+@media only screen and (max-width : 767px) {
+
+    .wrapper {
+        /* background:pink; */
+    }
+
+
+    /* =============================== MQ Mobile Header =============================== */
+
+    .header {
+        height: 130px;
+        flex-direction: column;
+        margin: 0;
+        padding: 0 0 2rem;
+        /* background: rgb(21, 168, 21); */
+    }
+
+    .logo_container {
+        padding: 1.2rem 0 0 0;
+        /* background: rgb(228, 162, 97); */
+    }
+
+    .header_nav_link {
+        width: 100%;
+        /* background: rgb(201, 110, 201); */
+    }
+
+    .link {
+        width: 100%;
+        border-bottom: 3px solid var(--color_bg);
+    }
+
+    .link:hover {
+        border-top: none;
+        border-bottom: 3px solid var(--color_font);
+    }
+
+
+    /* =============================== MQ Mobile Up Section =============================== */
+
+    .up_section {
+        margin: 0 1.2rem;
+        /* background: rgb(190, 53, 53); */
+    }
+
+    .search_bar .form_button[type="submit"] {
+        display: none;
+    }
+
+    .search_bar {
+        width: calc(286px + 49px);
+        /* background-color: rgb(0, 255, 242);  */
+    }
+
+    .search_bar .mobile_form_button[type="submit"] {
+        width: 49px;
+        height: 100%;
+        color: var(--color_fff);
+        font-size: 1.1rem;
+        font-weight: var(--bold);
+        background: var(--color_font);
+        border: none;
+        cursor: pointer;
+        shape-rendering: geometricPrecision;
+    }
+
+    .up_section_filter {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1.5rem 0;
+        /* background: rgb(105, 143, 200); */
+    }
+
+    .up_section_filter :nth-child(1) {
+        width: 100%;
+        /* color:rgb(153, 9, 231); */
+    }
+
+    .filter_button {
+        width: 47%;
+        justify-content: flex-start;
+        padding: 0;
+        font-size: 0.7rem;
+        font-weight: var(--bold);
+    }
+
+    .filter_button :nth-child(1) {
+        /* icons filter */
+        width: 20px;
+        padding: 0 0.4rem 0 1.2rem;
+        /* color: var(--color_font);
+        font-weight: var(--bold) */
+    }
+
+
+
+    /* =============================== MQ Mobile Main Section =============================== */
+
+
+    .main_section {
+        /* min-height:auto; */
+        flex-wrap: wrap-reverse;
+        /* flex-direction: none; */
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        /* padding-bottom: 1rem;          0 en fin de dev */
+        /* background: chocolate; */
+    }
+
+
+    /* =============================== MQ Mobile Most Popular Aside =============================== */
+
+    .most_popular_aside {
+        width: 100%;
+        padding: 0 0 3rem 0;
+        border-radius: 0;
+    }
+
+    .most_popular_title {
+        padding: 2.5rem 1.2rem 1.5rem;
+    }
+
+    .most_popular_cards_container {
+        gap: 1rem 2%;
+        padding: 0rem 1.2rem;
+    }
+
+
+
+    /* =============================== MQ Mobile Accommodations Section =============================== */
+
+    .accommodations_section {
+        width: 100%;
+        height: auto;
+        background: var(--color_fff);
+        border-radius: 0;
+        margin: 0;
+
+    }
+
+    .accommodations_section>h2 {
+        padding: 2.5rem 0 1.5rem 1.2rem;
+    }
+
+    .accommodations_cards_container {
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content:flex-start; pour annuler space between????? */
+        gap: 1rem 2%;
+        padding: 0 1.2rem 6.5rem 1.2rem;
+        ;
+    }
+
+    .accommodation_card {
+        width: 100%;
+        box-shadow: 5px 8px 7px var(--cards_shadow);
+        /* background: rgb(109, 153, 153); */
+    }
+
+    .show_more_accommodations {
+        display: none;
+    }
+
+
+
+    /* =============================== MQ Mobile City Activities =============================== */
+
+    .city_activities_container {
+        margin: 0;
+        padding-bottom: 5rem;
+        /* background-color: rgb(30, 210, 135); */
+    }
+
+    .city_activities_title {
+        padding: 0 0 1.3rem 1.2rem;
+    }
+
+    .city_activities_cards_container {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 1rem 2%;
+        padding: 0 1.2rem 0;
+    }
+
+    .city_activity_card {
+        width: 100%;
+        height: 190px;
+        /* background: cornflowerblue; */
+    }
+
+    .img_city_activity {
+        height: calc(190px - 47px);
+        object-position: 0% 20%;
+        /* left-right   top-bottom */
+    }
+
+    .city_activity_card:nth-of-type(2) .img_city_activity {
+        object-position: 20% 40%;
+    }
+
+    .text_city_activity {
+        height: 47px;
+        /* background-color: rgb(251, 255, 0); */
+    }
+
+
+
+    /* =============================== MQ Mobile Footer =============================== */
+
+    footer {
+        margin: 0;
+        /* background-color: rgb(11, 83, 17); */
+    }
+
+    .footer_container {
+        height: auto;
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+
+    .first_footer_column,
+    .footer_columns {
+        width: 100%;
+        padding: 0 1.2rem 1.5rem;
+    }
+
+    .first_footer_column {
+        margin: 0;
+    }
+
+    ul li:first-of-type {
+        padding-bottom: 0.9rem;
+        font-size: 1.1rem;
+        font-weight: var(--bold);
+    }
+
+    ul>li {
+        padding: 0.3rem 0;
+    }
+
+    .footer_container ul:last-child li:last-child {
+        padding-bottom: 2.5rem;
+    }
+
+}
+
+
+
+
+
+
+/* ================================================================================== */
+/* =============================== DEV --> BODY Border ============================== */
+/* ================================================================================== */
+
+@media screen and (min-width : 1051px) {
+    body {
+        border: 5px solid rgb(255, 143, 7);
+    }
+}
+
+@media screen and (min-width : 992px) and (max-width : 1050px) {
+    body {
+        border: 5px solid rgb(10, 235, 243);
+    }
+}
+
+@media screen and (min-width : 768px) and (max-width : 991px) {
+    body {
+        border: 5px solid lime;
+    }
+}
+
+@media screen and (min-width : 375px) and (max-width : 767px) {
+    body {
+        border: 5px solid rgb(153, 0, 255);
+    }
+}
+
+@media screen and (max-width : 374px) {
+
+    * {
+        height: 100%;
+        background: #0065fc;
+    }
+
+    body {
+        display: none;
+    }
+}
+
+
+/* =============================== FONT-SIZE ============================== */
+
+/* 
+
+16px = 1rem
+
+18px = 1.12rem
+
+22px = 1.37rem 
+
+*/
