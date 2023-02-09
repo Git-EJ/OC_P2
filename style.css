@@ -309,7 +309,6 @@ h2 {
 .img_accommodation {
     width: 100%;
     height:100%;
-    height: clamp(80%, 13vh, 100%);
     object-fit: cover;
     border-radius: 20px 20px 0 0;
 }
@@ -381,8 +380,8 @@ h2 {
 
 .most_popular_card {
     display: flex;
-    height: 144px;
     width: 100%;
+    height: 144px;
     border-radius: 20px;
     box-shadow: 5px 5px 9px var(--cards_shadow);
     /* distance horizontale     distance verticale    diffusion de l'ombre +> +diffuse */
@@ -418,9 +417,9 @@ h2 {
 }
 
 .text_most_popular_container p:after {
-    content: "\20AC";
-    /* € */
     font-weight: 600;
+    content: "\20AC";
+    /* € */ 
 }
 
 
@@ -503,7 +502,7 @@ footer {
 
 ul li:first-of-type {
     padding-bottom: 1rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: var(--bold);
 }
 
@@ -626,7 +625,7 @@ ul>li {
 
     .filter_button {
         padding: 0 1rem;
-        font-size: 0.9rem;
+        font-size: clamp(0.7rem, 1.5vw, 0.9rem);
     }
 
     .filter_button :nth-child(1) {
@@ -678,7 +677,7 @@ ul>li {
     }
 
     .text_most_popular_title-price>h3 {
-        font-size: 0.9rem;
+        font-size: clamp(0.8rem, 1.5vw, 0.9rem);
     }
 
     .text_most_popular_title-price>p {
@@ -906,8 +905,6 @@ ul>li {
         flex-wrap: wrap;
         /* justify-content:flex-start; pour annuler space between????? */
         gap: 1rem 2%;
-    
-        ;
     }
 
     .accommodation_card {
@@ -982,11 +979,6 @@ ul>li {
         margin: 0;
     }
 
-    ul li:first-of-type {
-        font-size: 1.1rem;
-        font-weight: var(--bold);
-    }
-
     ul>li {
         padding: 0.3rem 0;
     }
@@ -996,10 +988,6 @@ ul>li {
     } */
 
 }
-
-
-
-
 
 
 /* ================================================================================== */
