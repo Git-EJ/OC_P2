@@ -37,7 +37,7 @@ body {
 }
 
 .wrapper {
-    max-width: 1400px;
+    max-width: 1440px; /* figma */
     width: 100%;
     margin: 0 auto;
 }
@@ -60,7 +60,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 2rem;
+    margin: 0 3rem;
 }
 
 .logo_container {
@@ -106,7 +106,7 @@ header {
 /* =============================== Main =============================== */
 
 main {
-    margin: 0 2rem;
+    margin: 0 3rem;
 }
 
 
@@ -245,7 +245,7 @@ main {
 .accommodations_section {
     width: 880px;
     min-height: 626px;
-    padding: 2.5rem;
+    padding: 2rem;
     background: var(--color_bg);
     border-radius: 20px;
 }
@@ -299,12 +299,12 @@ main {
     height: 75px;
     display: flex;
     flex-direction: column;
-    padding: 0 0 0 1rem;
+    padding-left: clamp( 0.5rem, 1vw, 1rem);
 }
 
 .text_accommodation_title {
     padding-top: 0.2rem;
-    font-size: clamp(0.85rem, 1.2vw, 1rem);
+    font-size: clamp(0.85rem, 1.2vw, 1rem);;
     font-weight: 700;
 }
 
@@ -332,7 +332,7 @@ main {
     width: 420px;
     background: var(--color_bg);
     border-radius: 20px;
-    padding: clamp(1.5rem, 2.5rem, 3.5rem);
+    padding: 2rem;
 }
 
 .most_popular_title {
@@ -446,7 +446,7 @@ main {
 /* =============================== Footer =============================== */
 
 footer {
-    margin: 0 2rem;
+    margin: 0 3rem;
 }
 
 .footer_container {
@@ -487,7 +487,7 @@ ul>li {
 .rating_4,
 .rating_5 {
     color: var(--color_font);
-    font-size: clamp(0.65rem, 1.2vw, 0.75rem);
+    font-size: clamp(0.65rem, 1vw, 0.75rem);
     shape-rendering: geometricPrecision;
 }
 
