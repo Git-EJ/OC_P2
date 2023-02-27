@@ -52,6 +52,10 @@ h2 {
     font-weight: var(--bold);
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
 /* =============================== Header =============================== */
 
@@ -87,12 +91,6 @@ header {
     align-items: center;
     justify-content: center;
     border-top: 2px solid transparent; /*prevents movement during the hover effect*/
-}
-
-.link,
-.link:visited {
-    color: black;
-    text-decoration: none;
 }
 
 .link:hover {
@@ -260,8 +258,6 @@ main {
     margin: 2.5rem 0 0 0rem;
     font-size: 1.12rem;
     font-weight: var(--bold);
-    text-decoration: none;
-    color: black;
 }
 
 .accommodations_cards_container {
@@ -278,8 +274,6 @@ main {
     box-shadow: 5px 8px 7px var(--cards_shadow);
     overflow: hidden;
     background: var(--color_fff);
-    text-decoration: none;
-    color: black;
 }
 
 .img_accommodation_container {
@@ -361,8 +355,6 @@ main {
     height: 144px;
     border-radius: 20px;
     box-shadow: 5px 5px 9px var(--cards_shadow); /* distance horizontale  distance verticale  diffusion de l'ombre + > +diffuse */
-    text-decoration: none;
-    color: black;
     background: var(--color_fff);
 }
 
