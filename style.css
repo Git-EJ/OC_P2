@@ -134,14 +134,21 @@ main {
 }
 
 .geoloc_icon {
+    position: relative;
     width: 50px;
-    height: 18px;
-    padding: 15.5px 0;
+    height: 100%;
     background-color: var(--color_bg);
     cursor: pointer;
     shape-rendering: geometricPrecision;
 }
 
+
+.geoloc_icon > svg  {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* fill: #757575; */
+}
 .search_bar>input {
     width: 236px;
     height: 100%;
@@ -215,15 +222,19 @@ main {
 }
 
 .infos :nth-child(1) {
-    width: 0.7rem;
-    height: 0.7rem;
-    padding: 0.3rem;
-    margin: 0 0.5rem 0 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0.2rem;
+    margin-right: 0.5rem;
     color: var(--color_font);
     border: 1px solid #D9D9D9;
     border-radius: 50%;
     shape-rendering: geometricPrecision;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 
 
 /* =============================== Middle Section =============================== */
@@ -749,6 +760,9 @@ ul>li {
         padding: 0 0.4rem 0 1.2rem;
     }
 
+    .filter_button :nth-child(2) {
+        padding: 0 0 0 2rem;
+    }
 
     /* =============================== MQ Mobile Middle Section =============================== */
 
