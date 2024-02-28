@@ -2,7 +2,7 @@
 
 <div align='center'>
 
- <img src="./img//logo/Booki.png" alt="Booki logo" title="Booki logo" width="150" height="auto"/>
+ <img src="./img/logo/Booki.png" alt="Booki logo" title="Booki logo" width="150" height="auto"/>
  
 </div><br>
 
@@ -17,7 +17,16 @@
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 
 
-<strong>Project:</strong> From scratch/ 
+<strong>Project:</strong> From scratch.
 
 <strong>Project goal:</strong> Implement with html and css an app for hotel night booking.
+<br>
+
+<strong>Screenshot:</strong>
+
+<div align='center'>
+
+ <img src="./img/screenshots/Screenshot_Booki.png" alt="Booki Homepage screenshot" title="Booki Homepage screenshot" width="auto" height="auto"/>
+ 
+</div>
 
